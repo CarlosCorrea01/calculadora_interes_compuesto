@@ -41,30 +41,14 @@ class Usuario {
     }
 
 }
-// prueba 
 
-const arrayUsuarios = [];
+const arrayUsuarios = []
 
-const usuario001 = new Usuario ("german","garmendia","32","argentina","germi12","dadasd")
-const usuario002 = new Usuario ("germanadas","garmendasdasdia","32","argeasdantina","geasdmi12","dasadasd")
-
-arrayUsuarios.push(usuario001,usuario002)
-
-usuario001.nuevoAhorroInversion("auto",1000,50,1,3000)
-usuario001.nuevoAhorroInversion("vacaciones",1000,50,1,5000)
-console.log(arrayUsuarios)
+let pregunta = prompt("Desea registrarce? ingrese si o no").toUpperCase()
 
 
-
-
-
-//Sacar comentario de abajo y comentar lo de arriba, es un prototipo donde se ingresan los usuarios y se alazenan en el array usuarios
-
-/* let preguntaRegistro = prompt("Desea registrarce? ingrese si o no").toUpperCase()
-
-
-while(preguntaRegistro != "NO"){
-    if(preguntaRegistro === "SI"){
+while(pregunta !== "NO"){
+    if(pregunta === "SI"){
         let nombreProm = prompt("Ingrese nombre").toUpperCase()
         let apellidoProm = prompt("Ingrese apellido").toUpperCase()
         let nacionalidadProm = prompt("Ingrese nacionalidad").toUpperCase()
@@ -75,5 +59,45 @@ while(preguntaRegistro != "NO"){
     }else{
         alert("Ingrese una respuesta valida, intente nuevamente")
     }
-    preguntaRegistro = prompt("Desea registrarce? ingrese si o no").toUpperCase()
-} */
+    pregunta = prompt("Desea registrarce? ingrese si o no").toUpperCase()
+} 
+let = preguntaUsu = ""
+let ingUsu = prompt("Ingrese su usuario")
+let ingContra= prompt("ingrese su contraseña")
+let busqueda = arrayUsuarios.indexOf(arrayUsuarios.find(usuarios => usuarios.usuario===ingUsu && usuarios.contrasena===ingContra))
+let usuarioX = arrayUsuarios.find(usuarios => usuarios.usuario===ingUsu && usuarios.contrasena===ingContra)
+
+while(){
+    
+}
+alert("Bienvenido "+busqueda.nombre+ " "+ busqueda.apellido)
+/*
+if(((busqueda.planes).length)==0){
+    alert("No tiene ningun plan de ahorro/Inversion,Crearemos uno")
+    
+    busqueda.nuevoAhorroInversion(
+    prompt("Cual es el motivo del ahorro/inversion. Ej: Auto neuvo"),
+    parseFloat(prompt("Ingrese capital inicial si lo tiene")),
+    parseFloat(prompt("Que rendimiento ANUAL tendra su ahorro/Inversion?")),
+    parseInt(prompt("Cuanto tiempo planea ahorrar/Invertir? en AÑOS")),
+    parseFloat(prompt("Ingrese capital que aportara cada mes"))
+    )
+    alert("Genail tiene "+(busqueda.planes).length+" plan/es creados")
+    preguntaPlan = prompt("DeASDSAD")
+   
+}   */
+
+
+
+
+/*
+arrayUsuarios.forEach((usuarios,indice)=>{
+    let ingUsu = prompt("Ingrese su usuario")
+    let ingContra= prompt("ingrese su contraseña")
+    let indiceIng = arrayUsuarios.indexOf(arrayUsuarios.find(usuarios => usuarios.usuario===ingUsu && usuarios.contrasena===ingContra))
+    if (indice === indiceIng){
+        console.log("Bienvenido "+usuarios.nombre + " "+ usuarios.apellido)
+    }else{
+        console.log("no existe")
+    }
+})*/
