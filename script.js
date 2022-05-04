@@ -41,7 +41,7 @@ class Usuario {
     }
 
 }
-
+/*
 const arrayUsuarios = []
 
 let pregunta = prompt("Desea registrarce? ingrese si o no").toUpperCase()
@@ -99,3 +99,8 @@ if (busqueda != -1){
 }else{
     alert("No encontramos el usuario")
 }
+*/
+asdasdas
+adasdasd
+adasdasd
+adasd
