@@ -41,10 +41,32 @@ class Usuario {
     }
 
 }
-/*
 const arrayUsuarios = []
 
-let pregunta = prompt("Desea registrarce? ingrese si o no").toUpperCase()
+arrayUsuarios.push(new Usuario ("Fabricio","Correa","Argentina",23,"fcorrea17","011015"))
+arrayUsuarios.push(new Usuario ("Francis","Acosta","Argentina",23,"acosti78","fcorrea17"))
+arrayUsuarios.push(new Usuario ("Aldana","Barrios","Argentina",23,"Aldi","211298"))
+
+const usuario = document.getElementById("usuario");
+const contra = document.getElementById("contra");
+const ingresar = document.getElementById("ingresar");
+let busqueda = arrayUsuarios.indexOf(arrayUsuarios.find(usuarios => usuarios.usuario===usuario.value && usuarios.contrasena===contra.value))
+let usuarioX = arrayUsuarios.find(usuarios => usuarios.usuario===usuario.value && usuarios.contrasena===contra.value)
+ingresar.addEventListener('click',()=>{
+    let busqueda = arrayUsuarios.indexOf(arrayUsuarios.find(usuarios => usuarios.usuario===usuario.value && usuarios.contrasena===contra.value))
+    let usuarioX = arrayUsuarios.find(usuarios => usuarios.usuario===usuario.value && usuarios.contrasena===contra.value)   
+    if(usuario.value ==="" || contra.value ==="" || busqueda==-1){
+        let mensaje = document.getElementById("logDiv");
+        mensaje.innerHTML +='<p style="color:red">Usuario y contraseña incorrectos</p>'
+        
+    }else if(usuario.value!=="" && contra.value !=="" && busqueda!=-1){
+        alert("Bienvenido "+usuarioX.nombre + " " + usuarioX.apellido)
+    }
+})
+
+/*
+
+
 
 
 while(pregunta !== "NO"){
@@ -61,11 +83,6 @@ while(pregunta !== "NO"){
     }
     pregunta = prompt("Desea registrarce? ingrese si o no").toUpperCase()
 } 
-
-let ingUsu = prompt("Ingrese su usuario")
-let ingContra= prompt("ingrese su contraseña")
-let busqueda = arrayUsuarios.indexOf(arrayUsuarios.find(usuarios => usuarios.usuario===ingUsu && usuarios.contrasena===ingContra))
-let usuarioX = arrayUsuarios.find(usuarios => usuarios.usuario===ingUsu && usuarios.contrasena===ingContra)
 
 if (busqueda != -1){
     alert("Bienvenido "+usuarioX.nombre + " " + usuarioX.apellido)
@@ -100,7 +117,3 @@ if (busqueda != -1){
     alert("No encontramos el usuario")
 }
 */
-asdasdas
-adasdasd
-adasdasd
-adasd
