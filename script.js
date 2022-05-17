@@ -58,9 +58,13 @@ ingresar.addEventListener('click',()=>{
     if(usuario.value ==="" || contra.value ==="" || busqueda==-1){
         let mensaje = document.getElementById("logDiv");
         mensaje.innerHTML +='<p style="color:red">Usuario y contraseña incorrectos</p>'
-        
+        setTimeout(function() {
+            location.reload();
+          }, 1000);
     }else if(usuario.value!=="" && contra.value !=="" && busqueda!=-1){
-        alert("Bienvenido "+usuarioX.nombre + " " + usuarioX.apellido)
+     location.href="pagusu.html"
     }
 })
+
+
 
