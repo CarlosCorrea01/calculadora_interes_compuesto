@@ -16,55 +16,49 @@ class AhorroInversion{
     }
 
 }
+const user = document.getElementById("user")
+const password = document.getElementById("password")
+const login = document.getElementById("login")
 
-class Usuario {
-    
-    constructor (nombre,apellido,edad,nacionalidad,usuario,contrasena){
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-        this.nacionalidad = nacionalidad;
-        this.usuario = usuario;
-        this.contrasena = contrasena;
-        this.planes = [];
+login.addEventListener('submit',(e)=>{
+    e.preventDefault()
+    let busqueda = arrayUsuarios.indexOf(arrayUsuarios.find(usuarios => usuarios.usuario===user.value && usuarios.contrasena===password.value))
+    let usuarioX = arrayUsuarios.find(usuarios => usuarios.usuario===user.value && usuarios.contrasena===password.value)
+    if(user.value ==="" || password.value ==="" || busqueda==-1){
+        let msjAlert= document.getElementById("msjAlert")
+        msjAlert.innerHTML ='<p style="color:red">Usuario y contraseña incorrectos</p>'
+        login.reset()
+    }else if(user.value!=="" && password.value !=="" && busqueda!=-1){
+     //window.open('pagusu.html')
+     alert("Bienvenido "+usuarioX.nombre+ " "+ usuarioX.apellido)
+    }else{
+        alert("Operaciones no validas")
     }
+})
 
-    nuevoAhorroInversion(obj,cap,int,plzo,apor){
-        this.planes.push(new AhorroInversion (obj,cap,int,plzo,apor))
-    }
-    
-    cambiarUsuario(nuevoUsuario){
-        this.usuario = nuevoUsuario;
-    }
-    cambiarContrasena(nuevaContrasena){
-        this.usuario = nuevaContrasena;
-    }
 
-}
-const arrayUsuarios = []
 
-arrayUsuarios.push(new Usuario ("Fabricio","Correa","Argentina",23,"fcorrea17","011015"))
-arrayUsuarios.push(new Usuario ("Francis","Acosta","Argentina",23,"acosti78","fcorrea17"))
-arrayUsuarios.push(new Usuario ("Aldana","Barrios","Argentina",23,"Aldi","211298"))
-
+/*
 const usuario = document.getElementById("usuario");
 const contra = document.getElementById("contra");
 const ingresar = document.getElementById("ingresar");
-let busqueda = arrayUsuarios.indexOf(arrayUsuarios.find(usuarios => usuarios.usuario===usuario.value && usuarios.contrasena===contra.value))
-let usuarioX = arrayUsuarios.find(usuarios => usuarios.usuario===usuario.value && usuarios.contrasena===contra.value)
-ingresar.addEventListener('click',()=>{
+ingresar.addEventListener('click',()=>{   
     let busqueda = arrayUsuarios.indexOf(arrayUsuarios.find(usuarios => usuarios.usuario===usuario.value && usuarios.contrasena===contra.value))
-    let usuarioX = arrayUsuarios.find(usuarios => usuarios.usuario===usuario.value && usuarios.contrasena===contra.value)   
+    let usuarioX = arrayUsuarios.find(usuarios => usuarios.usuario===usuario.value && usuarios.contrasena===contra.value)
     if(usuario.value ==="" || contra.value ==="" || busqueda==-1){
-        let mensaje = document.getElementById("logDiv");
+        let mensaje = document.getElementById("logForm");
         mensaje.innerHTML +='<p style="color:red">Usuario y contraseña incorrectos</p>'
         setTimeout(function() {
             location.reload();
           }, 1000);
     }else if(usuario.value!=="" && contra.value !=="" && busqueda!=-1){
      location.href="pagusu.html"
+     let bienvenida = document.getElementById("navBienvenida")
+     bienvenida.innerHTML='<p>Bienvenido </p>'
     }
-})
+})*/
+
+
 
 
 
