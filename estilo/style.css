@@ -18,16 +18,29 @@ form{
     padding: 1rem;
     background-color: greenyellow;
 }
-
-.panel{
-    height: 90vh;
-    background-color: royalblue;
-
+#planes{
+    border: 0.2rem solid rgb(182, 222, 182);
 }
+.planesContenedor{
+    background-color: rgb(194, 249, 110);   
+}
+.planesContenedor div p span{
+    background-color: whitesmoke;
+    padding: 0.2rem;
+    font-weight: 600;
+    color: black;
+}
+.spanCapFin{
+    padding: 0.2rem;
+    background-color: whitesmoke;
+    color: green;
+    font-weight: 600;
+}
+
 .grid{
-    height: 100vh;
     margin: 0 auto;
 }
 .gridFila{
     margin: 0 auto;
+    width: 100%;
 }
